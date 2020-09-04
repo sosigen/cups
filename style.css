@@ -7,6 +7,7 @@ body{
     color: #fff;
     font-size: 80px;
     position: absolute;
+    transition: 2s all;
 }
 .left{
     left: calc(30% - 40px);
