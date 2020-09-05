@@ -1,25 +1,23 @@
 body{
     margin: 0;
     padding: 0;
-    background: #76BCBC;
+    background: #FFD166;
+}
+
+#slides{
+    display: flex;
+}
+#slide-container{
+    width: 600px;
+    height: 400px;
+    /* border: 2px solid black; */
+    position: absolute;
+    left: calc(50% - 300px);
+    top: calc(50% - 300px);
+    overflow: hidden;
 }
 .cup{
     color: #fff;
-    font-size: 80px;
-    position: absolute;
-    transition: 2s all;
-}
-.left{
-    left: calc(30% - 40px);
-    top: calc(50% - 40px);
-}
-.center{
     font-size: 400px;
-    left: calc(50% - 200px);
-    top: calc(50% - 200px);
-
-}
-.right{
-    left: calc(70% - 40px);
-    top: calc(50% - 40px);
+    padding: 0 100px;
 }
