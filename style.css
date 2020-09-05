@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: #76BCBC;
+    background: #FFD166;
 }
 #slides{
     display: flex;
@@ -20,16 +20,3 @@ body{
     font-size: 400px;
     padding: 0 100px;
 }
-/* .active{
-    visibility: visible;
-    left: calc(50% - 200px);
-    top: calc(50% - 200px);
-} */
-/* .left{
-    left: calc(30% - 40px);
-    top: calc(50% - 40px);
-} */
-/* .right{
-    left: calc(70% - 40px);
-    top: calc(50% - 40px);
-} */
