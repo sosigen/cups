@@ -2,7 +2,7 @@ class CupPile{
 
     constructor(){
         this.cups = document.querySelectorAll('.fa')
-        this.cupSize = this.cups[0].clientWidth;
+        this.cupSize = 700;
         this.counter = 0;
         this.slides = document.querySelector('#slides');
         this.running = false;

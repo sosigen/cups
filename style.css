@@ -8,16 +8,16 @@ body{
     display: flex;
 }
 #slide-container{
-    width: 600px;
-    height: 400px;
+    width: 700px;
+    height: 500px;
     /* border: 2px solid black; */
     position: absolute;
-    left: calc(50% - 300px);
-    top: calc(50% - 300px);
+    left: calc(50% - 350px);
+    top: calc(50% - 250px);
     overflow: hidden;
 }
 .cup{
     color: #fff;
-    font-size: 400px;
+    font-size: 500px;
     padding: 0 100px;
 }
