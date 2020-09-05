@@ -3,6 +3,7 @@ body{
     padding: 0;
     background: #FFD166;
 }
+
 #slides{
     display: flex;
 }

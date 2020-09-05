@@ -1,4 +1,5 @@
 class CupPile{
+
     constructor(){
         this.cups = document.querySelectorAll('.fa')
         this.cupSize = this.cups[0].clientWidth;
@@ -28,6 +29,7 @@ class CupPile{
             this.changeBack();
             this.slides.style.transform = `translateX(${(-this.cupSize * this.counter)}px)`
         }
+
     }
     repeatSlides = () => {
         this.running = false;
