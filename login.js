@@ -1,0 +1,1 @@
+const popup = document.querySelector('.pop-up');

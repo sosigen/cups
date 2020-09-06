@@ -2,6 +2,8 @@ body{
     margin: 0;
     padding: 0;
     background: #FFD166;
+    font-family: 'Dosis', sans-serif;
+    box-sizing: border-box;
 }
 
 #slides{
@@ -10,7 +12,6 @@ body{
 #slide-container{
     width: 700px;
     height: 500px;
-    /* border: 2px solid black; */
     position: absolute;
     left: calc(50% - 350px);
     top: calc(50% - 250px);
@@ -20,4 +21,71 @@ body{
     color: #fff;
     font-size: 500px;
     padding: 0 100px;
+}
+.pop-up{
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    width: 500px;
+    height: 300px;
+    top: calc(20% - 150px);
+    left: calc(50% - 250px);
+    background: white;
+    box-shadow: 5px 10px 8px #888888;
+}
+#nameForm{
+    display: flex;
+    flex-direction: column;
+}
+#closeButton{
+    position: relative;
+    left: 93%;
+    top: 2px;
+    border: none;
+    background: none;
+    font-weight: 1000;
+    font-size: 20px;
+    color: #AFBBF2;
+}
+.nameInput{
+    -webkit-appearance: none;
+    border: none;
+    margin: 12px;
+    width: 60%;
+    border-bottom: 1.5px solid rgb(37, 37, 37);
+}
+.nameInput:focus{
+    outline:none;
+}
+.after-holder > label{
+    position: relative;
+    top: -40px;
+    left: 13px;
+    transition: 0.3s all;
+}
+.nameInput:focus + label{
+    position: relative;
+    transform: translateY(-20px);
+    color: #AFBBF2;
+}
+.nameInput:focus::after{
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: red;
+}
+#nameForm > input[type=submit]{
+    font-family: inherit;
+    color: #AFBBF2;
+    -webkit-appearance: none;
+    border: 2px solid #AFBBF2;
+    background: none;
+    width: 30%;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+#nameForm> input[type=submit]:hover{
+    box-shadow: 0 0 40px 40px #AFBBF2 inset;
+    color: white;
 }
