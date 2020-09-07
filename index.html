@@ -12,20 +12,14 @@
 <body>
     <div class="pop-up">
         <button id='closeButton'>X</button>
-        <form id='nameForm'>
-            
-            <div class="after-holder">
-                <input type='text' class='nameInput' id='firstName' />
-                <label for='firstName'>Imię</label>
-            </div>
+        <div id='nameContainer'>
+            <input type="text" name="name" id="name" autocomplete="off" required>
+            <label for='firstName' class='label-name'>
+                <span class='content-name'>Imię i Nazwisko</span>
+            </label>
+        </div>
+        <input type='submit' class='button'/>
 
-            <div class="after-holder">
-                <input type='text' class='nameInput' id='lastName' />
-                <label for='lastName'>Nazwisko</label>
-            </div>
-
-            <input type='submit' class='button'/>
-        </form>
     </div>
     <div id="slide-container">
         <div id="slides">
@@ -43,3 +37,20 @@
     <script src="login.js"></script>
 </body>
 </html>
+
+
+
+ <!-- <form id='nameForm'>
+            
+            <div class="after-holder">
+                <input type='text' class='nameInput' id='firstName' />
+                <label for='firstName'>Imię</label>
+            </div>
+
+            <div class="after-holder">
+                <input type='text' class='nameInput' id='lastName' />
+                <label for='lastName'>Nazwisko</label>
+            </div>
+
+            
+</form> -->
