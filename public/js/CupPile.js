@@ -1,3 +1,5 @@
+
+
 class CupPile{
 
     constructor(){
@@ -27,7 +29,8 @@ class CupPile{
                     break;
             }
             this.changeBack();
-            this.slides.style.transform = `translateX(${(-this.cupSize * this.counter)}px)`
+            this.slides.style.transform = `translateX(${(-this.cupSize * this.counter)}px)`;
+            
         }
 
     }
@@ -52,7 +55,13 @@ class CupPile{
             current = current.slice(0, -5)
         }
         document.body.style.background = this.backgrounds[current];
+        this.sendStatusChange(current)
+    }
+    sendStatusChange(status){
+        cupClient.setData({
+            status:status
+        })
     }
 
 }
-const readyCups = new CupPile()
+const readyCups = new CupPile();
