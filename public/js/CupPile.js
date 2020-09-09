@@ -64,4 +64,3 @@ class CupPile{
     }
 
 }
-const readyCups = new CupPile();
