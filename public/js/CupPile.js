@@ -1,5 +1,3 @@
-
-
 class CupPile{
 
     constructor(){

@@ -10,7 +10,7 @@ class DBClient{
               'Content-Type': 'applications/json'
             }
         };
-        this.url = 'http://localhost:4000/updateCup';
+        this.url = 'http://192.168.7.72:4000/updateCup';
     }
     setData = (data) =>{
         if(data.status) this.currentStatus = data.status;

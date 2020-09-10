@@ -1,17 +1,21 @@
-const popup = document.querySelector('.pop-up');
-const closeButton = document.querySelector('#closeButton');
-const submitButton = document.querySelector('#sendName');
-const nameInput = document.querySelector('#name');
-let readyCups;
-const closePopUp = () => {
-    popup.style.display = 'none';
-    if(!readyCups) readyCups = new CupPile();
+class LoginPanel{
+    constructor(){
+        this.popup = document.querySelector('.pop-up');
+        this.closeButton = document.querySelector('#closeButton');
+        this.submitButton = document.querySelector('#sendName');
+        this.nameInput = document.querySelector('#name');
+        this.readyCups = undefined;
+        this.closeButton.addEventListener('click', () => {
+            this.closePopUp();
+        })
+        this.submitButton.addEventListener('click', () =>{
+            cupClient.setData({name:this.nameInput.value});
+            this.closePopUp();
+        }) 
+    }
+    closePopUp = () => {
+        this.popup.style.display = 'none';
+        if(!this.readyCups) this.readyCups = new CupPile();
+    }
 }
-closeButton.addEventListener('click', () => {
-    closePopUp();
-    
-})
-submitButton.addEventListener('click', () =>{
-    cupClient.setData({name:nameInput.value});
-    closePopUp();
-})  
+const loginPanel = new LoginPanel();
