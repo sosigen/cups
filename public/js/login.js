@@ -9,7 +9,7 @@ class LoginPanel{
             this.closePopUp();
         })
         this.submitButton.addEventListener('click', () =>{
-            cupClient.setData({name:this.nameInput.value});
+            cupClient.setName(this.nameInput.value);
             this.closePopUp();
         }) 
     }

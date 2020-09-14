@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='stylesheet' href='/css/popUp.css'/>
-    <link rel='stylesheet' href='/css/style.css'/>
+    <!-- <link rel='stylesheet' href='/css/popUp.css'/> -->
+    <link rel='stylesheet' href='css/style copy.css'/>
     <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet" type='text/css'>
     <title>Cups</title>
 </head>
 <body>
-    <div class="pop-up">
+    <!-- <div class="pop-up">
         <button id='closeButton'>X</button>
         <div id='nameContainer'>
             <input type="text" name="name" id="name" autocomplete="off" required>
@@ -21,8 +21,8 @@
         </div>
         <input type='submit' class='button' value='Prześlij' id='sendName'/>
 
-    </div>
-    <div id="slide-container">
+    </div> -->
+    <!-- <div id="slide-container">
         <div id="slides">
             <i id='waitClone' class="fa fa-clock fa-fw cup" aria-hidden="true"></i>
 
@@ -33,10 +33,19 @@
 
             <i id='okClone' class="fa fa-check fa-fw cup" aria-hidden="true"></i>
         </div>
-    </div> 
-    <script src="/js/CupPile.js"></script>
+    </div>  -->
+    <div id="optionBox">
+        <div class="option" id='ok'><a  class="fa fa-check fa-fw  cup" aria-hidden="true"></a></div>
+        <div class="option" id='error'><a  class="fa fa-exclamation-circle fa-fw cup" aria-hidden="true"></a></div>
+        <div class="option" id='wait'><a  class="fa fa-clock fa-fw  cup" aria-hidden="true"></a></div>
+    </div>
+    <script src=js/remek.js></script>
+    <!-- <script src="/js/CupPile.js"></script>
     <script src="/js/closeCheck.js"></script>
     <script src="/js/Login.js"></script>
     <script src="/js/DBClient.js"></script>
+
+
+-->
 </body>
 </html>

@@ -56,9 +56,7 @@ class CupPile{
         this.sendStatusChange(current)
     }
     sendStatusChange(status){
-        cupClient.setData({
-            status:status
-        })
+        cupClient.setStatus(status);
     }
 
 }
