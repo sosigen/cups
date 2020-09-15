@@ -11,23 +11,20 @@ class DBClient{
             }
         };
         this.updateURL = 'http://192.168.7.72:4000/updateStatus';
-        this.addUserURL = 'http://192.168.7.72:4000/addUser'
+        this.addUserURL = 'http://192.168.7.72:4000/addUser';
     }
-    // setData = (data) =>{
-    //     if(data.status) this.currentStatus = data.status;
-    //     if(data.name) this.currentName = data.name; 
-    //     if( this.currentName && this.currentStatus ) this.sendData();
-    // }
     setName = (name) =>{
         this.currentName = name;
         this.sendData(this.addUserURL, this.currentName);
     }
     setStatus = (status) =>{
+        console.log('nohej');
         if(this.currentName) this.currentStatus = status;
         this.sendData(this.updateURL, `${this.currentName}/${this.currentStatus}`)
     }
 
     sendData = async (url, param) =>{ 
+            console.log(`${url}/${param}`)
             await fetch(`${url}/${param}`, {
                     method: 'GET',
                     headers: {
@@ -36,14 +33,13 @@ class DBClient{
                     'Content-Type': 'applications/json'
                     } 
                 })
-        //     .then(response => response.json())
-        //     .then(json => {
-        //         console.log(json);
-        // })
+            .then(response => response.json())
+            .then(json => {
+                console.log(json);
+        })
         
     }
     sendClosingInfo = async () => {
-        console.log('e');
         await fetch(`192.168.72.2:4000/${this.currentName}/closing`, {
             method: 'GET',
             headers: {

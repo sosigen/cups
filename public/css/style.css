@@ -1,27 +1,74 @@
+:root{
+    --error: #b0303070;
+    --wait: #f4b94270;
+    --ok: #6da33e6c;
+    --okActive: #6da33efd;
+    --errorActive: #c73636;
+    --waitActive: #f4b942;
+}
+form{
+    display: block;
+}
 body{
     margin: 0;
     padding: 0;
-    background: #FFD166;
+    height: calc(100vh - 20px);
+    background: #13262F;
     font-family: 'Dosis', sans-serif;
     box-sizing: border-box;
 }
-
-#slides{
+#optionBox{
+    width: 100%;
+    height: 100%;
     display: flex;
+    align-items: space-between;
+    justify-content: center;
+    cursor: pointer;
 }
-#slide-container{
-    width: 700px;
-    height: 500px;
-    position: absolute;
-    left: calc(50% - 350px);
-    top: calc(50% - 250px);
-    overflow: hidden;
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.3%;
+    height: 100%;
+    border: 10px solid white;
+    border-radius: 20px;
+}
+label[for='ok']{
+    border: 10px solid var(--ok);
+    color: var(--ok);
+}
+label[for='wait']{
+    border: 10px solid var(--wait);
+    color: var(--wait);
+}
+label[for='error']{
+    border: 10px solid var(--error);
+    color: var(--error);
 }
 .cup{
-    color: #fff;
-    font-size: 500px;
-    padding: 0 100px;
+    font-weight: 1000;
+    font-size: 300px;
+    padding: 50px;
 }
+#optionBox > input[type='radio']{
+    display: none;
+}
+
+#optionBox > input[type=radio]:checked + label[for='ok']{
+    color:var(--okActive);
+    border-color: var(--okActive);
+}
+#optionBox > input[type=radio]:checked + label[for='wait']{
+    color:var(--waitActive);
+    border-color: var(--waitActive);
+}
+#optionBox > input[type=radio]:checked + label[for='error']{
+    color:var(--errorActive);
+    border-color: var(--errorActive);
+}
+
+
 
 
 
