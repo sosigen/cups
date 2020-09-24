@@ -1,0 +1,57 @@
+:root{
+    --error: #B03030;
+    --wait: #F4B942;
+    --ok: #6DA33E;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 20px);
+    background: #13262F;
+    font-family: 'Dosis', sans-serif;
+    box-sizing: border-box;
+}
+#optionBox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: space-between;
+    justify-content: center;
+    cursor: pointer;
+}
+.option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:33.3%;
+    height: 100%;
+    border: 10px solid white;
+    border-radius: 20px;
+}
+#ok{
+    border: 10px solid var(--ok);
+    color: var(--ok);
+}
+#wait{
+    border: 10px solid var(--wait);
+    color: var(--wait);
+}
+#error{
+    border: 10px solid var(--error);
+    color: var(--error);
+}
+.cup{
+    font-weight: 1000;
+    font-size: 200px;
+    padding: 50px;
+}
+.option:visited > i{
+    transform: all 0.3s;
+    transform: scale(1.5,1.5);
+}
+
+
+
+
+
+

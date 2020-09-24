@@ -67,7 +67,7 @@
 .content-name{
     position: absolute;
     bottom: 5px;
-    left: 0;
+    left: 5px;
     transition: all 0.3s ease;
 }
 #nameContainer #name:focus + .label-name .content-name, 

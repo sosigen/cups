@@ -1,0 +1,48 @@
+:root{
+    --ok: #6da33efd;
+    --error: #c73636;
+    --wait: #f4b942;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    background: url('/public/img/love.jpg');
+    background-size: cover;
+}
+#resultTable{
+    width: 30%;
+}
+.row{
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    border: 3px solid black;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+}
+.statusDot{
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nameBar{
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    justify-self: center;
+    align-self: center;
+}
+
+.ok{
+    background: var(--ok);
+}
+.wait{
+    background: var(--wait);
+}
+.error{
+    background: var(--error);
+}
