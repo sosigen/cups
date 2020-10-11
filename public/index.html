@@ -12,9 +12,9 @@
 </head>
 <body>
     <div class="pop-up">
-        <button id='closeButton'>X</button>
+        <button id='showTableButton'><a href='/userList'><i class="fas fa-database"></i></a></button>
         <div id='nameContainer'>
-            <input type="text" name="name" id="name" autocomplete="off" required>
+            <input type="text" name="name" id="name" autocomplete="off" maxlength='25' required>
             <label for='firstName' class='label-name'>
                 <span class='content-name'>Imię i Nazwisko</span>
             </label>
@@ -32,6 +32,7 @@
             <input type="radio" name="statuses" value="error" id="error" />
             <label class="option" for="error"><i  class="fa fa-clock fa-fw  cup" aria-hidden="true"></i></label>
         </form>
+    
     <script src="/js/CupPile.js"></script>
     <script src="/js/closeCheck.js"></script>
     <script src="/js/Login.js"></script>
