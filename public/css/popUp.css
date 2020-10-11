@@ -2,12 +2,12 @@
     border-radius: 10px;
     position: absolute;
     z-index: 1;
-    width: 300px;
-    height: 150px;
+    width: 20vw;
+    height: 25vh;
     top: calc(20% - 75px);
     left: calc(50% - 150px);
     background: white;
-    box-shadow: 5px 10px 8px #888888;
+    /* box-shadow: 5px 10px 8px #888888; */
 }
 #nameContainer{
     display: flex;
@@ -15,15 +15,16 @@
     justify-content: center;
     margin: auto;
 }
-#closeButton{
+#showTableButton{
     position: relative;
-    left: 90%;
-    top: 2px;
+    left: 85%;
+    top: .5vh;
     border: none;
     background: none;
     font-weight: 1000;
     font-size: 20px;
     color: #AFBBF2;
+    cursor: pointer;
 }
 
 
@@ -80,13 +81,16 @@
 #nameContainer #name:valid + .label-name::after{
     transform: translateX(0%);
 }
+a, a:active, a:visited, a:focus{
+    color: #AFBBF2;
+    outline: none;
+}
 .button{
     position: absolute;
     left: 35%;
-    top: 60%;
+    top: 65%;
     font-family: inherit;
     color: #AFBBF2;
-    -webkit-appearance: none;
     padding: 10px 0;
     border: 2px solid #AFBBF2;
     background: none;

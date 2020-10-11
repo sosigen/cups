@@ -1,42 +1,46 @@
+//klasa odpowiedzialna za komunikację z serwerem
 class DBClient{
     constructor(){
         this.currentStatus = null;
         this.currentName = null;
         this.requestOptions = {
-            method: 'GET',
-            headers: {
               'Accept': 'application/json',
               'Access-Control-Allow-Origin':'*',
               'Content-Type': 'applications/json'
-            }
         };
-        this.updateURL = 'http://192.168.7.72:4000/updateStatus';
-        this.addUserURL = 'http://192.168.7.72:4000/addUser';
-        this.closingURL = 'http://192.168.7.72:4000/closing';
+        this.updateURL = '/updateStatus';
+        this.addUserURL = '/addUser';
+        this.sessionURL = '/keepInBase';
     }
-    setName = (name) =>{
+    //przypisuje imie i/lub nazwisko uzytkownka do zmiennej 
+    //i wysyla zapytanie tworzace uzytkownika
+    setName = async (name) =>{
         this.currentName = name;
-        this.sendData(this.addUserURL, this.currentName);
+        const query = await this.sendData(this.addUserURL, this.currentName, 'POST');
+        return query;
     }
-    setStatus = (status) =>{
+    //zapisuje status, jesli uzytkownik ma nazwe
+    //wysyla zapytanie zmienijace status dla uzytkownika o przechowywanej nazwie
+    setStatus = async (status) =>{
         if(this.currentName) this.currentStatus = status;
-        this.sendData(this.updateURL, `${this.currentName}/${this.currentStatus}`)
+        const query = this.sendData(this.updateURL, `${this.currentName}/${this.currentStatus}`, 'PATCH');
+        return query;
     }
-
-    sendData = async (url, param) =>{ 
-        await fetch(`${url}/${param}`, this.requestOptions)
-            .then(response => response.json())
-            .then(json => {
-                console.log(json);
+    //metoda wysylajaca dane
+    //przyjmuje poczatek url, parametry i metode zapytania HTTP
+    sendData = async (url, param, method) =>{ 
+        return await fetch(`${url}/${param}`, {
+            method: method,
+            headers: this.requestOptions
         })
+        .then(response => {return response})
+        .catch(err => console.log(err))
         
     }
-    getData = async() =>{
-        await fetch('http://192.168.7.72:4000/listAll', this.requestOptions)
-        .then(response => response.json())
-        .then(json => {
-            console.log(json);
-        })
+    //pobiera liste uzytkownikow z serwera
+    getData = async () =>{
+        let response = await fetch('/listAll', this.requestOptions);
+        return response.json();
     }
 }
 const cupClient = new DBClient();

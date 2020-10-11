@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='stylesheet' href='css/popUp.css'/>
     <link rel='stylesheet' href='css/style.css'/>
-    <link rel="icon" href="/public/img/cup.ico">
     <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet" type='text/css'>
     <title>Cups</title>
 </head>
 <body>
     <div class="pop-up">
-        <button id='closeButton'>X</button>
+        <button id='showTableButton'><a href='/userList'><i class="fas fa-database"></i></a></button>
         <div id='nameContainer'>
             <input type="text" name="name" id="name" autocomplete="off" maxlength='25' required>
             <label for='firstName' class='label-name'>
@@ -33,6 +32,7 @@
             <input type="radio" name="statuses" value="error" id="error" />
             <label class="option" for="error"><i  class="fa fa-clock fa-fw  cup" aria-hidden="true"></i></label>
         </form>
+    
     <script src="/js/CupPile.js"></script>
     <script src="/js/closeCheck.js"></script>
     <script src="/js/Login.js"></script>

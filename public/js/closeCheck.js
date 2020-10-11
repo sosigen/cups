@@ -1,5 +1,9 @@
-window.addEventListener('beforeunload', function (e) { 
-    e.preventDefault();
-    if(cupClient.currentName) cupClient.sendData(cupClient.closingURL, cupClient.currentName);
-    e.returnValue = ''; 
-}); 
+//klasa przedluzajaca 'sesje' uzytkownika
+class ImAlive{
+    constructor(){
+        this.closeCheck = window.setInterval(this.ExtendSession, 500);
+    }
+    ExtendSession = () =>{
+        cupClient.sendData(cupClient.sessionURL, cupClient.currentName, 'PATCH');
+    }
+}
